@@ -1,0 +1,10 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        
+        f1 = list( dict.fromkeys(nums) )
+        print(f1,'f')
+        
+        if nums == f1:
+            return False
+        else:
+            return True
