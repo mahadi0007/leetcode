@@ -1,0 +1,17 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        minimal = prices[0] ## lowest price of all previous days
+        max_profit = 0
+
+        for i in range(1,len(prices)) :
+
+            if prices[i] < minimal:
+                minimal = prices[i] ## update minimal            
+            else:
+                ## max profit of a given day = 
+                ## price of a day - lowest price of all previous days
+                profit = prices[i]-minimal 						
+                if profit> max_profit:
+                    max_profit = profit                            
+
+        return max_profit
